@@ -1,12 +1,15 @@
 require 'minitest/autorun'
 require 'minitest/pride'
+require './lib/apartment'
 
 class ApartmentTest < Minitest::Test
 
-  def initialize
+  def test_it_exists
     unit1 = Apartment.new({number: "A1", monthly_rent: 1200, bathrooms: 1, bedrooms: 1})
 
-    assert_equal Apartment, unit1
+    require "pry"; binding.pry
+
+    assert_instance_of Apartment, unit1
   end
 
 end
