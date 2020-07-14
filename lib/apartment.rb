@@ -15,4 +15,8 @@ class Apartment
     def bathrooms
       @apartment[:bathrooms]
     end
+
+    def bedrooms
+      @apartment[:bedrooms]
+    end
 end
