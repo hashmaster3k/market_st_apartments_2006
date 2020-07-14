@@ -45,8 +45,25 @@ class Building
 
   def renter_with_highest_rent
     highest_rent = rented_units.max_by {|unit| unit.monthly_rent}
-    
+
     highest_rent.renter
+  end
+
+  def units_by_number_of_bedrooms
+    bedrooms = {1 => nil, 2 => nil, 3 => nil}
+
+    @units.each do |unit|
+      #require "pry"; binding.pry
+      if unit.bedrooms == 1
+        bedrooms[1] = [unit.number]
+      elsif unit.bedrooms == 2
+        bedrooms[2] = [unit.number]
+      elsif unit.bedrooms == 3
+        bedrooms[3] = [unit.number]
+      end
+    end
+
+    bedrooms
   end
 
 
