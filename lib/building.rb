@@ -43,5 +43,11 @@ class Building
     rented
   end
 
+  def renter_with_highest_rent
+    highest_rent = rented_units.max_by {|unit| unit.monthly_rent}
+    
+    highest_rent.renter
+  end
+
 
 end
