@@ -7,4 +7,8 @@ class Apartment
     def number
       @apartment[:number]
     end
+
+    def monthly_rent
+      @apartment[:monthly_rent]
+    end
 end
