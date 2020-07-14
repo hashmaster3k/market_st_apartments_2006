@@ -58,7 +58,7 @@ class Building
         bedrooms[1] = [unit.number]
       elsif unit.bedrooms == 2
         if bedrooms[2] != nil
-          bedrooms[2].push [unit.number]
+          bedrooms[2].push unit.number
         else
         bedrooms[2] = [unit.number]
         end
