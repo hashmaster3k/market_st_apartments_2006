@@ -13,4 +13,12 @@ class Building
   def renters
     @units.map {|unit| unit.renter.name}
   end
+
+  def average_rent
+    total_rent = 0.0
+
+    @units.each {|unit| total_rent += unit.monthly_rent}
+
+    (total_rent / @units.length).round(1)
+  end
 end

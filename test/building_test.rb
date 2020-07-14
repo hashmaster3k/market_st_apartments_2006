@@ -55,6 +55,7 @@ class BuildingTest < Minitest::Test
   end
 
   def test_gets_average_rent
+    building = Building.new
     unit1 = Apartment.new({number: "A1", monthly_rent: 1200, bathrooms: 1, bedrooms: 1})
     unit2 = Apartment.new({number: "B2", monthly_rent: 999, bathrooms: 2, bedrooms: 2})
 
