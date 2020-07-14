@@ -11,7 +11,11 @@ class Building
   end
 
   def renters
-    @units.map {|unit| unit.renter.name}
+    @units.map do |unit|
+      if unit.renter != nil
+        unit.renter.name
+      end
+    end.compact
   end
 
   def average_rent
@@ -21,4 +25,23 @@ class Building
 
     (total_rent / @units.length).round(1)
   end
+
+  def rented_units
+    rented = []
+
+    if renters == []
+      return []
+
+    elsif renters != []
+
+      @units.each do |unit|
+        if unit.renter != nil
+          rented << unit
+        end
+      end
+    end
+    rented
+  end
+
+
 end
