@@ -19,4 +19,8 @@ class Apartment
     def bedrooms
       @apartment[:bedrooms]
     end
+
+    def renter
+      nil
+    end
 end
