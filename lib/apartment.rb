@@ -2,6 +2,7 @@ class Apartment
 
     def initialize(apartment)
       @apartment = apartment
+      @rented = {}
     end
 
     def number
@@ -21,6 +22,10 @@ class Apartment
     end
 
     def renter
-      nil
+      @rented.keys[0]
+    end
+
+    def add_renter(renter)
+      @rented = {renter => @apartment}
     end
 end
