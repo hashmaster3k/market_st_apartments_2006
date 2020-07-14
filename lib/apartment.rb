@@ -11,4 +11,8 @@ class Apartment
     def monthly_rent
       @apartment[:monthly_rent]
     end
+
+    def bathrooms
+      @apartment[:bathrooms]
+    end
 end
