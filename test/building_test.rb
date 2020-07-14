@@ -28,4 +28,8 @@ class BuildingTest < Minitest::Test
 
     assert_equal [unit1, unit2], building.units
   end
+
+  def test_get_renters
+
+  end
 end
